@@ -3,27 +3,27 @@
     <!--
         クリエイターズ夏休み_19 公式サイト
         サイト制作：Minato86 (https://twitter.com/minatoo86)
-        
+
         このサイトはクリエイターズ夏休み_19のために制作されたものです。
         このサイトのソースの無断転用を固く禁じます。
     -->
     <head>
         <!-- 文字コード設定 -->
         <meta charset="utf-8">
-        
+
         <!-- jsファイル読み込み -->
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/lity.js"></script>
-        
+
         <!-- cssファイル読み込み -->
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/lity.css">
-        
+
         <!-- Googleフォント読み込み -->
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700,900" rel="stylesheet">
-        
+
         <!-- アイコン読み込み -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -37,7 +37,7 @@
 
         <!-- 画面サイズ設定 -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
         <!-- Google用メタタグ -->
         <meta itemprop="name" content="クリエイターズ夏休み">
         <meta itemprop="description" content="クリエイターズ夏休み公式サイトです。">
@@ -62,16 +62,16 @@
     </head>
     <body>
         <!-- 読み込み中の画面 -->
-        <div id="loader-bg"> 
+        <div id="loader-bg">
           <div id="loader">
             <img src="img/logo_1000x1000.png" width="300" height="300" alt="Loading..." class="mx-auto d-block"/>
           </div>
         </div>
-        
+
         <!-- 読み込み画面表示スクリプト -->
         <script>
             $(function() {
-              var h = $(window).height(); 
+              var h = $(window).height();
 
               $('#contents').css('display','none');//コンテンツを非表示に
               $('#loader-bg ,#loader').height(h).css('display','block');//ローディング画像を表示
@@ -94,7 +94,7 @@
               $('#loader').delay(600).fadeOut(300);
             }
         </script>
-        
+
         <!-- 本文 -->
         <div id="contents">
             <nav class="navbar navbar-expand-sm navbar-light bg-light">
@@ -140,8 +140,16 @@
                 <a href="https://forms.gle/Jb5Ayr4KvEbEbzS57" class="btn btn-outline-primary" target="_blank">参加登録</a>
                 <h3 id="timetable" class="mt-5">タイムテーブル</h3>
                 <hr>
-                <p>まだ参加登録を受け付けています！</p>
-                <a href="https://forms.gle/Jb5Ayr4KvEbEbzS57" class="btn btn-outline-primary" target="_blank">参加登録</a>
+                <h1 class="mt-4">18:00~ オープニング</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="img/keitomo_400x400.jpg" width="174px" height="174px" class="rounded-circle">
+                    </div>
+                    <div class="col-sm-9">
+                        説明
+                    </div>
+                </div>
                 <h3 id="admin" class="mt-5">運営</h3>
                 <hr>
                 <div class="row">
@@ -151,12 +159,12 @@
                         <h5><span class="badge badge-info">司会・進行</span></h5>
                     </div>
                     <div class="col">
-                        <a href="https://twitter.com/GAMEBAKA2000" target="_blank"><img src="img/gamebaka_174x174.png" class="rounded-circle"></a> 
+                        <a href="https://twitter.com/GAMEBAKA2000" target="_blank"><img src="img/gamebaka_174x174.png" class="rounded-circle"></a>
                         <h3>げ～むばか</h3>
                         <h5><span class="badge badge-info">運営</span></h5>
                     </div>
                     <div class="col">
-                        <a href="https://twitter.com/hanatai001" target="_blank"><img src="img/hanatai001_174x174.png" class="rounded-circle"></a> 
+                        <a href="https://twitter.com/hanatai001" target="_blank"><img src="img/hanatai001_174x174.png" class="rounded-circle"></a>
                         <h3>hanatai001</h3>
                         <h5><span class="badge badge-info">運営</span></h5>
                     </div>
@@ -185,11 +193,11 @@
                         <h5><span class="badge badge-success">公式ロゴ</span></h5>
                     </div>
                     <div class="col">
-                        <a href="img/logo2_2048x2048.jpg" data-lity><img src="img/logo2_2048x2048.jpg" width="174px" height="174px" class="rounded-circle"></a> 
+                        <a href="img/logo2_2048x2048.jpg" data-lity><img src="img/logo2_2048x2048.jpg" width="174px" height="174px" class="rounded-circle"></a>
                         <h3><a href="https://twitter.com/moco_rocket" target="_blank">moco/ぽてこ</a></h3>
                     </div>
                     <div class="col">
-                        <a href="img/logo3_819x1206.png" data-lity><img src="img/logo3_819x1206.png" width="174px" height="256.22px"></a> 
+                        <a href="img/logo3_819x1206.png" data-lity><img src="img/logo3_819x1206.png" width="174px" height="256.22px"></a>
                         <h3><a href="https://twitter.com/mitsuki_hotta" target="_blank">ミツキ</a></h3>
                     </div>
                 </div>
