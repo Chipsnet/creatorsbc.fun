@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+    <!--
+        クリエイターズ夏休み_19 公式サイト
+        サイト制作：Minato86 (https://twitter.com/minatoo86)
+
+        このサイトはクリエイターズ夏休み_19のために制作されたものです。
+        このサイトのソースの無断転用を固く禁じます。
+    -->
+    <head>
+        <!-- 文字コード設定 -->
+        <meta charset="utf-8">
+
+        <!-- jsファイル読み込み -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/lity.js"></script>
+
+        <!-- cssファイル読み込み -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/lity.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+        <!-- Googleフォント読み込み -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700,900" rel="stylesheet">
+
+        <!-- アイコン読み込み -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/site.webmanifest">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="img/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- 画面サイズ設定 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Google用メタタグ -->
+        <meta itemprop="name" content="クリエイターズ夏休み">
+        <meta itemprop="description" content="クリエイターズ夏休み公式サイトです。">
+        <meta itemprop="image" content="img/logo_1000x1000.png">
+
+        <!-- Facebook用メタタグ -->
+        <meta property="og:url" content="https://apps.m86.work/genkai/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="クリエイターズ夏休み">
+        <meta property="og:description" content="クリエイターズ夏休み公式サイトです。">
+        <meta property="og:image" content="img/logo_1000x1000.png">
+
+        <!-- Twitter用メタタグ -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="クリエイターズ夏休み">
+        <meta name="twitter:description" content="クリエイターズ夏休みサイトです。">
+        <meta name="twitter:image" content="img/logo_1000x1000.png">
+
+        <!-- HTML用メタタグ -->
+        <title>クリエイターズ夏休み</title>
+        <meta name="description" content="クリエイターズ夏休み公式サイトです。">
+    </head>
+    <body>
+        <!-- 読み込み中の画面 -->
+        <div id="loader-bg">
+          <div id="loader">
+            <img src="img/logo_1000x1000.png" width="300" height="300" alt="Loading..." class="mx-auto d-block"/>
+          </div>
+        </div>
+
+        <!-- 読み込み画面表示スクリプト -->
+        <script>
+            $(function() {
+              var h = $(window).height();
+
+              $('#contents').css('display','none');//コンテンツを非表示に
+              $('#loader-bg ,#loader').height(h).css('display','block');//ローディング画像を表示
+            });
+
+            $(window).load(function () { //読み込み完了したら実行する
+              $('#loader-bg').delay(900).fadeOut(800);//ローディングを隠す
+              $('#loader').delay(600).fadeOut(300);
+              $('#contents').css('display', 'block');//コンテンツを表示する
+            });
+
+            $(function(){
+              setTimeout('stopload()',10000);　//いつまでもローディング状態にならないように10秒で強制表示させる
+
+            });
+
+            function stopload(){ //強制表示の関数
+              $('#contents').css('display','block');
+              $('#loader-bg').delay(900).fadeOut(800);
+              $('#loader').delay(600).fadeOut(300);
+            }
+        </script>
+
+        <!-- 本文 -->
+        <div id="contents">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <a href="#" class="navbar-brand">
+                クリエイターズ夏休み
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse"
+                    data-target="#navmenu1"
+                    aria-controls="navmenu1"
+                    aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu1">
+                    <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#top">Top</a>
+                    <a class="nav-item nav-link" href="#about">About</a>
+                    <a class="nav-item nav-link" href="#timetable">Timetable</a>
+                    <a class="nav-item nav-link" href="#admin">Admin</a>
+                    <a class="nav-item nav-link" href="#logo">Logo</a>
+                    <a class="nav-item nav-link" href="#twitter">Twitter</a>
+                    </div>
+                </div>
+            </nav>
+            <div id="top" class="jumbotron jumbotron-fluid">
+                <div class="container text-center">
+                    <h3 class="display-4 text-white">クリエイターズ夏休み</h3>
+                    <p class="lead mt-5 text-white">2019/08/17放送済み</p>
+                </div><!-- /.container -->
+            </div><!-- /.jumbotron -->
+            <div class="container text-center">
+                    <div class="alert alert-primary" role="alert"><strong>アンケートにご協力ください！</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeekRMCGxma3eVhDzC5ElDl1ficJPNiedh4J95hMLrnAdqfIg/viewform" href="_brank">こちら</a></div>
+                <p>ご視聴いただいた皆さん、本当にありがとうございました！<br>
+                また次の放送でお会いしましょう！！</p>
+                <p>この企画は、皆様がいて成り立っています。<br>
+                この放送に関係したすべての方に、感謝！！</p>
+                    <h3 id="about" class="mt-5">放送 <span class="badge badge-danger">放送終了</span></h3>
+                <hr>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/05Yf10pzRds" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 id="timetable" class="mt-5">タイムテーブル</h3>
+                <hr>
+                <h1><i class="fas fa-broadcast-tower mt-4"></i></h1>
+                <h1 class="mt-2">18:00~ オープニング</h1>
+                <hr width="80%" color="black" class="my-5">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/TN00b13" target="_blank"><img src="img/th3_n00b13.png" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">th3_n00b13 <i class="fas fa-cube"></i></h1>
+                        <h4>Animation Nodes 2.1の初歩的な使い方</h4>
+                        <img src="https://user-images.githubusercontent.com/17828134/31174324-0abc094a-a903-11e7-895a-ef7c602e14e1.png" alt="">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">TJM <i class="fas fa-video"></i></h1>
+                        <h4>Aviutlで3面投影</h4>
+                        <img src="https://shinoyon.com/wp-content/uploads/2018/05/AviUtl_icon.png" width="40px" height="40px" alt="">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/Not_TJM" target="_blank"><img src="img/black - Yuki Tjm.png" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <h1><i class="fas fa-broadcast-tower mt-4"></i></h1>
+                <h1 class="mb-4">限界大会 x クリエイターズ夏休み企画①</h1>
+                <center>
+                    <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E9%99%90%E7%95%8CDTM%E5%A4%A7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#限界DTM大会</a><br>29日から31日の旅行中に作った曲を翌日からの3日間でre editしました。ストーリー性が結構出せたと思う<a href="https://t.co/T5vCastxap">https://t.co/T5vCastxap</a></p>&mdash; 無 (@N0ye_e4) <a href="https://twitter.com/N0ye_e4/status/1157637726662848512?ref_src=twsrc%5Etfw">2019年8月3日</a></blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </center>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#限界映像大会</a><br>C4DとBlenderで頑張った…!!<a href="https://t.co/N4APoV3Jvu">https://t.co/N4APoV3Jvu</a> <a href="https://t.co/unDHzHXMYZ">pic.twitter.com/unDHzHXMYZ</a></p>&mdash; ムリミ (@_Murimi01) <a href="https://twitter.com/_Murimi01/status/1160924786500890624?ref_src=twsrc%5Etfw">2019年8月12日</a></blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                            
+                    </div>
+                    <div class="col-sm-4">
+                        <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#限界映像大会</a><br>遅れてすみません！＞＜<br>この映像からblender２．８を使おうとしたらめちゃくちゃ失敗しました(´;ω;｀)（他にもいろいろふぐあいががが）<br>質はかなり落ちちゃったけど、頑張って完成させられたのでよかったです＞＜<br>素晴らしい楽曲→　<a href="https://t.co/ZmDazcGbq0">https://t.co/ZmDazcGbq0</a> <a href="https://t.co/swstC7R5js">pic.twitter.com/swstC7R5js</a></p>&mdash; (*ΦωΦ)れいぽん (@reiponzikkyou) <a href="https://twitter.com/reiponzikkyou/status/1160570783724216321?ref_src=twsrc%5Etfw">2019年8月11日</a></blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                            
+                    </div>
+                    <div class="col-sm-4">
+                        <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#限界映像大会</a><br>Music:Summer Falce (COSMOS Re edit work)<br>URL:<a href="https://t.co/z6qYLvi3Qg">https://t.co/z6qYLvi3Qg</a> <a href="https://t.co/hn1HJIGDJl">pic.twitter.com/hn1HJIGDJl</a></p>&mdash; Yurikago (@Yurikago601) <a href="https://twitter.com/Yurikago601/status/1160905748626300930?ref_src=twsrc%5Etfw">2019年8月12日</a></blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                            
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/ShunMinase" target="_blank"><img src="img/みなせしゅん.jpg" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">みなせしゅん <i class="fas fa-magic"></i></h1>
+                        <h4>ロジックで攻めるロゴデザイン</h4>
+                        <img src="https://image.freepik.com/free-icon/adobe-illustrator_318-1496.jpg" width="50px" height="50px" alt="">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">Legend <i class="fas fa-video"></i></h1>
+                        <h4>Aeとイラレの共存ルート</h4>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/after-effects-555176.png" width="45px" height="40px" alt="">
+                        <img src="https://image.freepik.com/free-icon/adobe-illustrator_318-1496.jpg" width="50px" height="50px" alt="">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/Legendtomo_" target="_blank"><img src="img/Legend.png" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <h1><i class="fas fa-broadcast-tower mt-4"></i></h1>
+                <h1 class="mb-4">限界大会 x クリエイターズ夏休み企画②</h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#限界映像大会</a><br>URL:<a href="https://t.co/oRWw1layAZ">https://t.co/oRWw1layAZ</a><br>最初で力尽きてしまい、しかもAul3Dだったし、時間がなくて死ぬ <a href="https://t.co/D4scL2V9zt">pic.twitter.com/D4scL2V9zt</a></p>&mdash; Alpha/Rpha (@AlphagpcT) <a href="https://twitter.com/AlphagpcT/status/1160180224992014336?ref_src=twsrc%5Etfw">2019年8月10日</a></blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div class="col-sm-4">
+                        <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">いつもながらゴミでごめんなさい<a href="https://twitter.com/hashtag/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#限界映像大会</a> <a href="https://t.co/orywyAo1hF">pic.twitter.com/orywyAo1hF</a></p>&mdash; ハクアを博愛する人 (@hakua_love1234) <a href="https://twitter.com/hakua_love1234/status/1160168694321840128?ref_src=twsrc%5Etfw">2019年8月10日</a></blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div class="col-sm-4">
+                        <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">初参加！<br>（投稿するまでに10回以上エンコードし直したのは内緒）<a href="https://t.co/fIsI6L5bsJ">https://t.co/fIsI6L5bsJ</a><a href="https://twitter.com/hashtag/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#限界映像大会</a> <a href="https://t.co/qmbTlNJFoo">pic.twitter.com/qmbTlNJFoo</a></p>&mdash; NAUTAN (@NAUTAN360) <a href="https://twitter.com/NAUTAN360/status/1160420891341099015?ref_src=twsrc%5Etfw">2019年8月11日</a></blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>    
+                <hr width="80%" color="black" class="my-5">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/Kou45388803" target="_blank"><img src="img/kou_nakamura.jpg" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">Kou Nakamura <i class="fas fa-cube"></i></h1>
+                        <h4>猫でもわかるsubstance painter</h4>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/3ds-max-599475.png" width="50px" height="50px" alt="">
+                        <img src="https://pbs.twimg.com/profile_images/1024998428860993543/wTsGI4rW_400x400.jpg" width="60px" height="60px" alt="">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">Yazhirushi <i class="fas fa-video"></i></h1>
+                        <h4>フラットモーション in GIF</h4>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/after-effects-555176.png" width="45px" height="40px" alt="">
+                        <img src="https://shinoyon.com/wp-content/uploads/2018/05/AviUtl_icon.png" width="40px" height="40px" alt="">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/Yazhirushi" target="_blank"><img src="img/Yazhirushi.jpg" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/Klavistr" target="_blank"><img src="img/favicon - くらびすた.png" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">くらびすた <i class="fas fa-headphones"></i></h1>
+                        <h4>スマブラで学ぶ音響効果</h4>
+                        <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/f7/cb/b3/f7cbb377-2fea-b494-2953-c353f4b0754f/AppIconCBLE-0-1x_U007emarketing-85-220-0-5.png/246x0w.jpg" width="50px" height="50px" alt="">
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <h1><i class="fas fa-user-secret"></i> シークレットゲスト</h1>
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5 text-left">
+                        <h1 class="mt-4">Marirui <i class="fas fa-video"></i></h1>
+                        <h4>質感重視のドットエフェクトを作ろう</h4>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/after-effects-555176.png" width="45px" height="40px" alt="">
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://twitter.com/marirui67" target="_blank"><img src="img/marirui_174x174.png" width="174px" height="174px" class="rounded-circle"></a>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <hr width="80%" color="black" class="my-5">
+                <h1><i class="fas fa-broadcast-tower mt-4"></i></h1>
+                <h1 class="mt-2">エンディング</h1>
+                <p class="mb-5">※タイムテーブルは予告なしに変更となる場合があります。</p>
+                <h3 id="admin" class="mt-5">運営</h3>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <a href="https://twitter.com/ktmo_mov" target="_blank"><img src="img/keitomo_400x400.jpg" width="174px" height="174px" class="rounded-circle"></a>
+                        <h3>keitomo</h3>
+                        <h5><span class="badge badge-info">司会・進行</span></h5>
+                    </div>
+                    <div class="col">
+                        <a href="https://twitter.com/GAMEBAKA2000" target="_blank"><img src="img/gamebaka_174x174.png" class="rounded-circle"></a>
+                        <h3>げ～むばか</h3>
+                        <h5><span class="badge badge-info">運営</span></h5>
+                    </div>
+                    <div class="col">
+                        <a href="https://twitter.com/hanatai001" target="_blank"><img src="img/hanatai001_174x174.png" class="rounded-circle"></a>
+                        <h3>hanatai001</h3>
+                        <h5><span class="badge badge-info">運営</span></h5>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <a href="https://twitter.com/marirui67" target="_blank"><img src="img/marirui_174x174.png" class="rounded-circle"></a>
+                        <h3>Marirui</h3>
+                        <h5><span class="badge badge-info">運営</span></h5>
+                    </div>
+                    <div class="col">
+                        <a href="https://twitter.com/minatoo86" target="_blank"><img src="img/minato86_957x957.jpg" width="174px" height="174px" class="rounded-circle"></a>
+                        <h3>Minato86</h3>
+                        <h5><span class="badge badge-info">Web製作</span></h5>
+                    </div>
+                </div>
+                <h3 class="mt-5" id="logo">公式ロゴ</h3>
+                <hr>
+                <p>クリエイターズ夏休みでは<a href="https://apps.m86.work/genkai/" target="_blank">限界デザイン大会</a>で公式ロゴを募集しました！</p>
+                <p>応募されたロゴを紹介します。</p>
+                <p class="text-muted">クリックで拡大します</p>
+                <div class="row">
+                    <div class="col">
+                        <a href="img/logo_1000x1000.png" data-lity><img src="img/logo_1000x1000.png" width="174px" height="174px" class="rounded-circle"></a>
+                        <h3><a href="https://twitter.com/ShunMinase" target="_blank">みなせしゅん</a></h3>
+                        <h5><span class="badge badge-success">公式ロゴ</span></h5>
+                    </div>
+                    <div class="col">
+                        <a href="img/logo2_2048x2048.jpg" data-lity><img src="img/logo2_2048x2048.jpg" width="174px" height="174px" class="rounded-circle"></a>
+                        <h3><a href="https://twitter.com/moco_rocket" target="_blank">moco/ぽてこ</a></h3>
+                    </div>
+                    <div class="col">
+                        <a href="img/logo3_819x1206.png" data-lity><img src="img/logo3_819x1206.png" width="174px" height="256.22px"></a>
+                        <h3><a href="https://twitter.com/mitsuki_hotta" target="_blank">ミツキ</a></h3>
+                    </div>
+                </div>
+                <h3 class="mt-5" id="twitter">Twitter</h3>
+                <hr>
+                <p>クリエイターズ夏休み関連のツイートには<br>ぜひ公式ハッシュタグ「#クリエイターズ夏休み_19」をご利用ください！</p>
+                <a href="https://twitter.com/search?q=%23クリエイターズ夏休み_19&src=typd" class="btn btn-outline-primary" target="_blank">ハッシュタグを覗く</a>
+                <p class="mt-5">公式Twitterのフォローもいかがですか？</p>
+                <a class="twitter-timeline" data-width="500" data-height="600" href="https://twitter.com/creators_bc?ref_src=twsrc%5Etfw">Tweets by creators_bc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <footer class="page-footer font-small blue mt-5">
+                <div class="footer-copyright text-center py-3">© 2019 Copyright
+                    <a href="https://twitter.com/creators_bc" target="_blank"> クリエイターズ生放送</a>
+                </div>
+            </footer>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/conami.js"></script>
+    </body>
+</html>
