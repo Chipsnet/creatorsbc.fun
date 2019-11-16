@@ -1,0 +1,16 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    margin: 0;
+}
+@media screen and (max-width: 480px) {
+    #wrap{
+        text-align: center;
+    }
+    .gif{
+        width: 300px;
+    }
+}

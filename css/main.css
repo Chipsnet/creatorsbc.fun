@@ -1,16 +1,97 @@
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-body{
+html, body {
     margin: 0;
 }
-@media screen and (max-width: 480px) {
-    #wrap{
+
+.wrap {
         text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: white;
+    background: rgb(174,0,179);
+    background: linear-gradient(62deg, rgba(174,0,179,0.5326505602240896) 0%, rgba(158,55,221,1) 55%, rgba(0,212,255,1) 100%);
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center; /*左右中央揃え*/
+    align-items: center;     /*上下中央揃え*/
+}
+
+.blinking{
+	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.logo {
+    width: 400px;
+    margin-bottom: 25px;
+}
+
+.video-promo {
+    width: 1000px;
+    height: 563px;
+}
+
+@media screen and (max-width:480px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    .logo {
+        width: 200px;
     }
-    .gif{
-        width: 300px;
+    body {
+        font-size: 0.8rem;
     }
+    .video-promo {
+        width: 480px;
+        height: 270px;
+    }
+}
+
+.btn-flat-vertical-border {
+    font-size: 1.2em;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-left: solid 6px #668ad8;
+    border-right: solid 6px #668ad8;
+    color: #668ad8;
+    background: #e1f3ff;
+    transition: .4s;
+  }
+  
+  .btn-flat-vertical-border:hover {
+    background: #668ad8;
+    color: #FFF;
+  }
+
+.list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 30px 16% 60px;
+}
+
+.list-item {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+}
+
+.list-item img{
+    width: 100px;
+    border-radius: 50%;
 }
