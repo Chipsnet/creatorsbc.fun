@@ -3,7 +3,8 @@ html, body {
 }
 
 .wrap {
-        text-align: center;
+    text-align: center;
+    padding-bottom: 2em;
     font-family: 'Kosugi Maru', sans-serif;
     color: white;
     background: rgb(174,0,179);
@@ -83,6 +84,13 @@ section {
     flex-wrap: nowrap;
     justify-content: space-around;
     padding: 30px 16% 60px;
+}
+
+@media screen and (max-width:700px) { 
+    .list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 .list-item {
