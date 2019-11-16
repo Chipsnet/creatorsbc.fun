@@ -4,7 +4,7 @@ html, body {
 
 .wrap {
     text-align: center;
-    padding-bottom: 2em;
+    padding: 20px 20px;
     font-family: 'Kosugi Maru', sans-serif;
     color: white;
     background: rgb(174,0,179);
@@ -101,7 +101,7 @@ section {
         justify-content: space-between;
     }
     .list-item img {
-        width: 50px
+        width: 70px
     }
 }
 
