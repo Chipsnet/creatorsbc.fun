@@ -11,11 +11,53 @@ html, body {
     background: linear-gradient(62deg, rgba(174,0,179,0.5326505602240896) 0%, rgba(158,55,221,1) 55%, rgba(0,212,255,1) 100%);
 }
 
-section {
+#top, #twitter {
     height: 100vh;
     display: flex;
     justify-content: center; /*左右中央揃え*/
     align-items: center;     /*上下中央揃え*/
+}
+
+.body {
+    padding: 10% 0;
+    display: flex;
+    justify-content: center; /*左右中央揃え*/
+    align-items: center;     /*上下中央揃え*/
+}
+
+@media screen and (max-width:480px) { 
+    .body {
+        padding: 30% 0;
+        display: flex;
+        justify-content: center; /*左右中央揃え*/
+        align-items: center;     /*上下中央揃え*/
+    }
+}
+
+.tt p{
+    display:inline-block;
+    vertical-align:top; /*縦方向の揃え位置を指定*/
+}
+
+.tt img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:700px) { 
+    .tt img {
+        width: 130px
+    }
+    .tt {
+        margin: 3rem 0;
+    }
+}
+
+
+.des {
+    margin: 2rem 0 0 1rem;
+    text-align: left;
+    line-height: 1.5rem;
 }
 
 .blinking{
